@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import { m } from "motion/react";
 import Alert from "../component/Alert";
 import { Particles } from "../component/Particles";
+import { mySocials } from "../constants";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -33,12 +35,12 @@ const Contact = () => {
       setisLoading(true);
       try {
         console.log("Form sbmitted:", formData);
-        await emailjs.send("service_usivcaj","template_kbsf7ek",{
-        from_name: formData.name,
-        to_name: "Sandesh",
-        reply_to: formData.email,
+        await emailjs.send("service_55znj6l","template_tyd7xvw",{
+        name: formData.name,
+        email: formData.email,
         message: formData.message,
-      }, "sKfFVMF1HV0m6c8tl")
+        title: "Portfolio Contact",
+      }, "EgFzNZJG5RZ0yL3-o")
       setisLoading(false);
       
       setFormData({
@@ -72,7 +74,7 @@ const Contact = () => {
               <div className="mb-5">
                 <label htmlFor="name" className="feild-label">Full Name</label>
                 <input id="name" name="name" type="text" className="field-input field-input-focus" 
-                placeholder="Aman Singh"
+                placeholder="John Doe"
                 autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -81,7 +83,7 @@ const Contact = () => {
               <div className="mb-5">
                 <label htmlFor="email" className="feild-label">Email</label>
                 <input id="email" name="email" type="email" className="field-input field-input-focus" 
-                placeholder="amansingh@email.com"
+                placeholder="johndoe@email.com"
                 autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -99,6 +101,25 @@ const Contact = () => {
               </div>
               <button type="submit" className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation ">{!isLoading ? "Send" : "Sending..."}</button>
             </form>
+
+            <div className="flex flex-col items-center justify-center w-full gap-4 mt-8 pt-6 border-t border-white/10">
+              <p className="text-sm font-medium text-neutral-400">Or find me on</p>
+              <div className="flex gap-5">
+                {mySocials.map((social) => (
+                  <a
+                    key={social.id}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={social.name}
+                    className="flex justify-center items-center w-12 h-12 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <img src={social.icon} alt={social.name} className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
           </div>
     </section>
   )

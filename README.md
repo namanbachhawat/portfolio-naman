@@ -1,12 +1,33 @@
-# React + Vite
+# Naman Bachhawat – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive personal portfolio website showcasing my projects, experience, and skills as a CS student and developer.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** + **Vite** – Fast, component-driven architecture
+- **Tailwind CSS** – Responsive, mobile-first UI
+- **Three.js** – Interactive 3D elements (astronaut, globe)
+- **Framer Motion** – Smooth animations
+- **EmailJS** – Contact form integration
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Interactive 3D astronaut and globe
+- Parallax backgrounds and particle effects
+- Project showcase with detailed modals
+- Timeline-based experience section
+- Resume download and viewer
+- Contact form with email delivery
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Links
+
+- [LinkedIn](https://linkedin.com/in/naman-bachhawat)
+- [GitHub](https://github.com/namanbachhawat)
+- [Email](mailto:namanbachhawatjain@gmail.com)

@@ -26,7 +26,7 @@ export const Timeline = ({
 
   return (
     <div
-      className="c-space min-h-screen -mt-20 md:-mt-30"
+      className="c-space min-h-screen mt-10 md:mt-16"
       ref={containerRef}>
       <h2 className="text-heading">My Work Experiences</h2>
       <div ref={ref} className="relative">
