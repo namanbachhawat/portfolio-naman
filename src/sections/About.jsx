@@ -3,6 +3,7 @@ import Card from '../component/Card';
 import { Globe } from '../component/Globe';
 import CopyEmailButton from '../component/CopyEmailButton';
 import { Frameworks } from '../component/Frameworks';
+import { mySocials } from '../constants';
 const About = () => {
     const grid2Container = React.useRef();
   return    ( <section id="about" className='c-space section-spacing'>
@@ -70,6 +71,20 @@ const About = () => {
             justify-center gap-4 size-full'>
                 <p className='text-center headtext'>Do you want to start a project together?</p>
                 <CopyEmailButton />
+                <div className="flex gap-4 mt-2">
+                  {mySocials.filter(s => s.name !== 'Email').map((social) => (
+                    <a
+                      key={social.id}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={social.name}
+                      className="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:-translate-y-1"
+                    >
+                      <img src={social.icon} alt={social.name} className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity" />
+                    </a>
+                  ))}
+                </div>
             </div>
         </div>
         {/* grid 5 */}
